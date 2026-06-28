@@ -117,6 +117,40 @@
                 margin-top: 30px;
             }
         }
+        /* El contenedor que agrupa las cajas de los logos */
+.logos-universidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;               /* Reducimos un poco el espacio entre logos */
+    margin: 15px 0;          /* Margen superior e inferior ajustado */
+    flex-wrap: wrap;
+}
+
+/* La "caja contenedor" para cada logo individual - ¡TAMAÑO REDUCIDO AQUÍ! */
+.logo-box {
+    width: 60px;             /* Nuevo ancho más pequeño */
+    height: 40px;            /* Nuevo alto más pequeño */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Reglas para las imágenes dentro de las cajas (se mantienen para mantener proporción) */
+.logo-box img {
+    max-width: 100%;         /* Se adaptan al nuevo ancho de 60px */
+    max-height: 100%;        /* Se adaptan al nuevo alto de 40px */
+    object-fit: contain;     /* Sigue manteniendo la proporción sin deformar */
+    filter: grayscale(10%);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover ajustado al nuevo tamaño */
+.logo-box img:hover {
+    transform: scale(1.06);   /* Escala un poco menos pronunciada por ser más pequeña */
+    filter: grayscale(0%);
+}
     </style>
 </head>
 <body>
