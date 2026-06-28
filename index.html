@@ -3,54 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio / My Portfolio</title>
+    <title>Mi Portafolio Académico</title>
     <style>
         /* Estilos generales */
         body { 
             font-family: 'Seaford', 'Georgia', Garamond, serif; 
-            text-align: center; 
             margin: 0; 
             padding: 0; 
             background-color: #e6f0fa; /* Tu fondo azul claro */
             color: #2c3e50;
+            line-height: 1.6;
         }
         
         /* Contenedor principal */
         .tarjeta {
             background-color: white;
-            max-width: 600px;
-            margin: 60px auto;
-            padding: 30px;
+            max-width: 800px; /* Un poco más ancho para acomodar bien el texto */
+            margin: 50px auto;
+            padding: 40px;
             border-radius: 15px;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); 
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06); 
         }
 
-        /* Foto de perfil */
+        /* Encabezado con la foto de perfil */
+        .header-perfil {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
         .foto-perfil {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%; 
             object-fit: cover;
             border: 3px solid #3a7bd5; 
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
-        /* Contenedor para dividir los idiomas en dos columnas */
+        /* Contenedor bilingüe de dos columnas */
         .idiomas-container {
             display: flex;
             justify-content: space-between;
-            gap: 20px;
-            text-align: left;
-            margin-top: 20px;
+            gap: 35px;
         }
 
-        /* Cada columna de idioma */
+        /* Columnas de idioma */
         .columna-idioma {
             flex: 1;
-            padding: 10px;
         }
 
-        /* Pequeña etiqueta para indicar el idioma */
+        .columna-en {
+            border-left: 1px solid #e6f0fa; 
+            padding-left: 35px;
+        }
+
+        /* Etiquetas ES / EN */
         .badge-idioma {
             font-family: sans-serif;
             font-size: 0.75rem;
@@ -59,19 +66,39 @@
             padding: 3px 8px;
             border-radius: 10px;
             font-weight: bold;
-            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 15px;
         }
 
-        /* El botón */
+        /* Títulos de los nuevos apartados */
+        .seccion-titulo {
+            color: #3a7bd5;
+            border-bottom: 2px solid #e6f0fa;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 1.3rem;
+        }
+
+        /* Estilo para los textos dentro de los apartados */
+        .columna-idioma p {
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        /* Enlaces o botones al final */
+        .contacto {
+            text-align: center;
+            margin-top: 40px;
+        }
+
         .boton {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 10px 20px;
             background-color: #3a7bd5; 
             color: white;
             text-decoration: none; 
             border-radius: 6px;
             font-weight: bold;
-            margin-top: 25px;
             transition: 0.3s;
         }
 
@@ -79,47 +106,68 @@
             background-color: #2a5f9e; 
         }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background: #d0e1f9;
-            margin: 20px 0;
+        /* Hacerlo adaptable a celulares */
+        @media (max-width: 768px) {
+            .idiomas-container {
+                flex-direction: column;
+            }
+            .columna-en {
+                border-left: none;
+                padding-left: 0;
+                margin-top: 30px;
+            }
         }
     </style>
 </head>
 <body>
 
     <div class="tarjeta">
-        <!-- Tu foto -->
-        <img src="https://picsum.photos/200" alt="Foto de perfil" class="foto-perfil">
         
-        <!-- Sección de dos columnas para Español e Inglés -->
+        <!-- Cabecera de la página -->
+        <div class="header-perfil">
+            <img src="https://picsum.photos/200" alt="Foto de perfil" class="foto-perfil">
+            <h1 style="margin: 5px 0;">Tu Nombre Completo</h1>
+            <p style="color: #7f8c8d; font-style: italic; margin: 0;">Investigador / Docente / Divulgador</p>
+        </div>
+        
+        <!-- Bloque bilingüe principal -->
         <div class="idiomas-container">
             
-            <!-- Columna en Español -->
+            <!-- ====== COLUMNA EN ESPAÑOL ====== -->
             <div class="columna-idioma">
                 <span class="badge-idioma">ES</span>
-                <h2>¡Hola, soy Tu Nombre! 👋</h2>
-                <p>Soy un apasionado de la tecnología y este es mi primer sitio web oficial alojado en GitHub Pages.</p>
-                <hr>
-                <h4>Habilidades:</h4>
-                <p>💻 HTML y CSS | 🚀 Git & GitHub</p>
+                
+                <h3 class="seccion-titulo">🎓 Docencia</h3>
+                <p>Aquí puedes escribir las asignaturas que impartes, tutorías, tu filosofía de enseñanza o las universidades en las que trabajas.</p>
+                
+                <h3 class="seccion-titulo">🔬 Investigación</h3>
+                <p>Escribe aquí tus líneas de investigación principales, tus últimas publicaciones, proyectos financiados o intereses científicos.</p>
+                
+                <h3 class="seccion-titulo">📢 Divulgación</h3>
+                <p>Usa este espacio para enlazar tus artículos de blog, charlas científicas, podcasts, eventos de ciencia en los que participas o redes sociales dedicadas a la divulgación.</p>
             </div>
 
-            <!-- Columna en Inglés -->
-            <div class="columna-idioma" style="border-left: 1px solid #e6f0fa; padding-left: 20px;">
+            <!-- ====== COLUMNA EN INGLÉS (ENGLISH) ====== -->
+            <div class="columna-idioma columna-en">
                 <span class="badge-idioma">EN</span>
-                <h2>Hi, I'm Your Name! 👋</h2>
-                <p>I am passionate about technology, and this is my first official website hosted on GitHub Pages.</p>
-                <hr>
-                <h4>Skills:</h4>
-                <p>💻 HTML & CSS | 🚀 Git & GitHub</p>
+                
+                <h3 class="seccion-titulo">🎓 Teaching</h3>
+                <p>Here you can write about the courses you teach, mentorships, your teaching philosophy, or the universities you are affiliated with.</p>
+                
+                <h3 class="seccion-titulo">🔬 Research</h3>
+                <p>Describe your main research areas, your latest publications, funded projects, or scientific interests here.</p>
+                
+                <h3 class="seccion-titulo">📢 Outreach & Science Communication</h3>
+                <p>Use this space to link to your blog posts, science talks, podcasts, public science events, or social media accounts dedicated to outreach.</p>
             </div>
 
         </div>
         
-        <!-- Botón centralizado -->
-        <a href="https://github.com" target="_blank" class="boton">Visita mi GitHub / Visit my GitHub</a>
+        <!-- Botón de contacto -->
+        <div class="contacto">
+            <a href="https://github.com" target="_blank" class="boton">Contacto / Contact</a>
+        </div>
+        
     </div>
 
 </body>
