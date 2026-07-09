@@ -60,54 +60,58 @@
     <!-- Sección de Exámenes -->
     <div>
         <span style="font-size: 1.1rem; font-weight: bold; display: block; margin-bottom: 12px;">📝 Exámenes de otros años:</span>
-        <style>
-  /* Espacio entre las columnas de la tabla */
+<style>
+  /* Esto estira el espacio entre las columnas sin que se vea texto raro */
   .tabla-examenes th, 
   .tabla-examenes td {
-      padding-right: 60px; /* Sube este número (ej. 80px) si quieres que se separen todavía más */
+      padding-right: 70px; /* Puedes subir o bajar este número para ajustar la distancia */
+      vertical-align: top;
   }
-  /* Espacio entre los botones que están dentro de la misma celda */
+  /* Esto separa un poco los botones si se juntan */
   .tabla-examenes .btn-examen {
-      margin-right: 15px; 
+      margin-right: 10px;
+      display: inline-block;
+      margin-bottom: 5px;
   }
 </style>
-        <table class="tabla-examenes">
-            <thead>
-                <tr>
-                    <th>Año Académico</th>
-                    <th>Parcial I</th>
-                    <th>Parcial II</th>
-                </tr>
-            </thead>
-        <tbody>
-        <tr>
-          <td class="ano-col"><strong>2024</strong></td>
-          <!-- Columna de Parcial I -->
-          <td>
-            <a href="Parcial_I_Matematicas_I_102.pdf" target="_blank" class="btn-descarga btn-examen">Parcial I Grupo 102 (2024)</a>
-            <a href="Parcial_I_Matematicas_I_103.pdf" target="_blank" class="btn-descarga btn-examen">Parcial I Grupo 103 (2024)</a>
-          </td>
-          <!-- Columna de Parcial II -->
-          <td>
-            <a href="Parcial_II_Matematicas_I_102.pdf" target="_blank" class="btn-descarga btn-examen">Parcial II Grupo 102 (2024)</a>
-            <a href="Parcial_II_Matematicas_I_103.pdf" target="_blank" class="btn-descarga btn-examen">Parcial II Grupo 103 (2024)</a>
-          </td>
-        </tr>
-        <tr>
-          <td class="ano-col"><strong>2025</strong></td>
-          <!-- Columna de Parcial I -->
-          <td>
-            <a href="Parcial_I_Matematicas_I_104.pdf" target="_blank" class="btn-descarga btn-examen">Parcial I Grupo 104 (2025)</a>
-            <a href="Parcial_I_Matematicas_para_la_economia.pdf" target="_blank" class="btn-descarga btn-examen">Parcial I Grupo 108 (2025)</a>
-          </td>
-          <!-- Columna de Parcial II -->
-          <td>
-            <a href="Parcial_II_Matematicas_I_104_ADE_MKT_.pdf" target="_blank" class="btn-descarga btn-examen">Parcial II Grupo 104 (2025)</a>
-            <a href="Parcial_II_Matematicas_I_108__Economia_.pdf" target="_blank" class="btn-descarga btn-examen">Parcial II Grupo 108 (2025)</a>
-          </td>
-        </tr>
-      </tbody>
-        </table>
+
+<table class="tabla-examenes">
+  <thead>
+    <tr>
+      <th>Año Académico</th>
+      <th>Parcial I</th>
+      <th>Parcial II</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="ano-col"><strong>2024</strong></td>
+      <!-- Columna de Parcial I -->
+      <td>
+        <a href="Parcial_I_Matematicas_I_102.pdf" target="_blank" class="btn-descarga btn-examen">Parcial I Grupo 102 (2024)</a>
+        <a href="Parcial_I_Matematicas_I_103.pdf" target="_blank" class="btn-descarga btn-examen">Parcial I Grupo 103 (2024)</a>
+      </td>
+      <!-- Columna de Parcial II -->
+      <td>
+        <a href="Parcial_II_Matematicas_I_102.pdf" target="_blank" class="btn-descarga btn-examen">Parcial II Grupo 102 (2024)</a>
+        <a href="Parcial_II_Matematicas_I_103.pdf" target="_blank" class="btn-descarga btn-examen">Parcial II Grupo 103 (2024)</a>
+      </td>
+    </tr>
+    <tr>
+      <td class="ano-col"><strong>2025</strong></td>
+      <!-- Columna de Parcial I -->
+      <td>
+        <a href="Parcial_I_Matematicas_I_104.pdf" target="_blank" class="btn-descarga btn-examen">Parcial I Grupo 104 (2025)</a>
+        <a href="Parcial_I_Matematicas_para_la_economia.pdf" target="_blank" class="btn-descarga btn-examen">Parcial I Grupo 108 (2025)</a>
+      </td>
+      <!-- Columna de Parcial II -->
+      <td>
+        <a href="Parcial_II_Matematicas_I_104_ADE_MKT_.pdf" target="_blank" class="btn-descarga btn-examen">Parcial II Grupo 104 (2025)</a>
+        <a href="Parcial_II_Matematicas_I_108__Economia_.pdf" target="_blank" class="btn-descarga btn-examen">Parcial II Grupo 108 (2025)</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
     </div>
 </div>
 
